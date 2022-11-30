@@ -7,10 +7,10 @@ export default (req, res) => {
   UserModel.findOne({ email, password })
     .then((foundUser) => {
         if (!foundUser) {
-            return res.status(400).json({ error: "Invalid Credentials" });
+            return res.send({ error: "Invalid Credentials" });
         }
 
-        const token = generateToken(foundUser);
+        const token = generateToken(foundUser._id);
         return res.status(200).json({ token });
     })
     .catch((err) => {
