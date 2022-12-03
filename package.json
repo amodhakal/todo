@@ -7,9 +7,14 @@
   "author": "Amodh <amodhakal@gmail.com>",
   "license": "MIT",
   "scripts": {
+<<<<<<< HEAD
     "start": "node --experimental-specifier-resolution=node server.js",
     "build": "cd client && yarn build",
     "dev": "nodemon --experimental-specifier-resolution=node server.js"
+=======
+    "start": "nodemon --experimental-specifier-resolution=node server.js",
+    "build": "yarn && cd client && yarn && yarn build && cd .."
+>>>>>>> 4cca7807f63f856989605d808a468fd6070570eb
   },
   "dependencies": {
     "concurrently": "^7.6.0",
