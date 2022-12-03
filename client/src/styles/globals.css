@@ -75,6 +75,10 @@ form {
 
 /* Mainly Home! */
 
+.link:hover {
+  cursor: pointer;
+}
+
 .task-input {
   width: calc(100% - 7rem);
   padding: 0 1rem;
