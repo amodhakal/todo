@@ -11,9 +11,14 @@ export default function Task(props) {
   }
 
   return (
-    <div key={_id}>
-      <input type="checkbox" onChange={deleteItem}/> {task}
-      <button onClick={deleteItem}>Delete</button>
+    <div key={_id} className="task-holder">
+      <div className="checkbox-holder">
+        <input type="checkbox" className="checkbox" onChange={deleteItem} />
+      </div>
+      <div className="task-item-holder">{task}</div>
+      <div className="button-holder">
+        <button onClick={deleteItem} className="form-btn">Delete</button>
+      </div>
     </div>
   );
 }

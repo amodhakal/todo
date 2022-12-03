@@ -39,21 +39,27 @@ export default function Home() {
   });
 
   return (
-    <>
-      <button onClick={() => cookie.remove("token")}>Logout</button>
-      <form onSubmit={addTask}>
-        <input
-          type="text"
-          placeholder="Add task"
-          value={formTask}
-          onChange={(e) => setFormTask(e.target.value)}
-        />
-        <button type="submit">Add!</button>
-      </form>
-
-      {tasks.map((task) => (
-        <Task props={task} />
-      ))}
-    </>
+    <div className="page">
+      <div className="item-holder">
+        <div className="link-holder">
+          <a className="link" onClick={() => cookie.remove("token")}>
+            Logout
+          </a>
+        </div>
+        <form className="form-holder" onSubmit={addTask}>
+          <input
+            type="text"
+            placeholder="Add task"
+            className="task-input height-equalizer"
+            value={formTask}
+            onChange={(e) => setFormTask(e.target.value)}
+          />
+          <button type="submit" className="form-btn task-btn">Add!</button>
+        </form>
+        {tasks.map((task) => (
+          <Task props={task}/>
+        ))}
+      </div>
+    </div>
   );
 }

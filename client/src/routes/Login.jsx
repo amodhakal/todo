@@ -7,31 +7,44 @@ export default function Register() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
-  
+
   useEffect(() => {
-    redirectUser()
-  })
+    redirectUser();
+  });
 
   return (
-    <form onSubmit={(e) => handleLogin(e)}>
-      <input
-        type="email"
-        placeholder="Email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-      />
-      <br />
-      <input
-        type="password"
-        placeholder="Password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-      />
-      <br />
-      <button type="submit">Submit</button>
-      <br />
-      <Link to="/register">No account, register!</Link>
-    </form>
+    <div className="page">
+      <div className="item-holder">
+        <div className="title-holder">
+          <h1 className="title">Sign in!</h1>
+        </div>
+        <form onSubmit={(e) => handleLogin(e)}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            className="form-input"
+          />
+          <br />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            className="form-input"
+          />
+          <br />
+          <button type="submit" className="form-btn">
+            Submit
+          </button>
+          <br />
+        </form>
+        <div className="link-holder">
+          <Link to="/register" className="link">No account, register!</Link>
+        </div>
+      </div>
+    </div>
   );
 
   function handleLogin(e) {
@@ -42,7 +55,7 @@ export default function Register() {
         res.data.error
           ? alert("Invalid Credentials")
           : cookie.set("token", res.data.token);
-        redirectUser()
+        redirectUser();
       })
       .catch((err) => console.log(err));
   }

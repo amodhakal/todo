@@ -1,7 +1,122 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
-    font-family: "Open Sans", "sans-serif";
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", "sans-serif";
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* Mainly login, register! */
+
+.item-holder {
+  border: 1px solid #ccc;
+  width: 30rem;
+  max-width: 90vw;
+}
+
+.link-holder {
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.link {
+  color: gray;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.title-holder {
+  background: blue;
+  padding: 1rem;
+}
+
+.title {
+  color: white;
+  font-size: 1.5rem;
+}
+
+form {
+  padding: 1rem;
+}
+
+.form-input {
+  width: calc(100% - 2rem);
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.form-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  font-size: 1rem;
+  color: white;
+  background: blue;
+}
+
+.form-btn:hover {
+  cursor: pointer;
+  background-color: rgb(173, 200, 230);
+}
+
+.form-holder {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Mainly Home! */
+
+.task-input {
+  width: calc(100% - 7rem);
+  padding: 0 1rem;
+  font-size: 1rem;
+}
+
+.height-equalizer {
+  height: 2.5rem;
+}
+
+.task-btn {
+  width: 4rem;
+}
+
+/* Task Components! */
+.task-holder {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.checkbox-holder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.checkbox {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.task-item-holder {
+  display: flex;
+  justify-content: left;
+  width: 100%;
+}
+
+.button-holder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
 }
