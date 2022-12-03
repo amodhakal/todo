@@ -8,7 +8,7 @@
   "license": "MIT",
   "scripts": {
     "start": "nodemon --experimental-specifier-resolution=node server.js",
-    "build": "cd client && yarn build"
+    "build": "yarn && cd client && yarn && yarn build && cd .."
   },
   "dependencies": {
     "concurrently": "^7.6.0",
