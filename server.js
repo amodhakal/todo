@@ -19,7 +19,7 @@ app.get("/api", (req, res) => res.send("API Running!"));
 app.post("/api/login", login);
 app.post("/api/register", register);
 
-app.get("/api/getTasks", validate, getTasks);
+app.post("/api/getTasks", validate, getTasks);
 app.post("/api/addTask", validate, addTask);
 app.post("/api/deleteTask", validate, deleteTask);
 
@@ -36,7 +36,7 @@ mongoose
     }
 
     // Deployment
-    const PORT = process.env.PORT || 5000;
+    const PORT = process.env.PORT || 8080;
     app.listen(PORT, () => console.log("Server Running"));
   })
   .catch((err) => console.error(err));
